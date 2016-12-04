@@ -32,7 +32,12 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         cell.numberLabel.text = "001"
         cell.nameLabel.text = "Bulbizarre"
-        cell.imageLabel.image = UIImage(named: "Assets/pokemon/1")
+        if let pkmnImage:UIImage = UIImage(named: "1") {
+            print("Successfuly fetched image")
+            cell.imageLabel.image = pkmnImage
+        } else {
+            print("Couldn't fetch image")
+        }
         //cell.textLabel?.text = "Bulbi"
         return cell
     }
