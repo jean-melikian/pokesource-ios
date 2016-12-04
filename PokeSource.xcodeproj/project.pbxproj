@@ -8,22 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D3537C901DF4A186000B19DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537C8F1DF4A186000B19DA /* AppDelegate.swift */; };
-		D3537C921DF4A186000B19DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537C911DF4A186000B19DA /* ViewController.swift */; };
+		D3537C921DF4A186000B19DA /* DexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537C911DF4A186000B19DA /* DexViewController.swift */; };
 		D3537C951DF4A186000B19DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3537C931DF4A186000B19DA /* Main.storyboard */; };
 		D3537C981DF4A186000B19DA /* PokeSource.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3537C961DF4A186000B19DA /* PokeSource.xcdatamodeld */; };
 		D3537C9A1DF4A186000B19DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3537C991DF4A186000B19DA /* Assets.xcassets */; };
 		D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */; };
+		D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */; };
+		D3537CAA1DF4B1C7000B19DA /* EntryDexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */; };
+		D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CAF1DF4B26F000B19DA /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3537C8C1DF4A186000B19DA /* PokeSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3537C8F1DF4A186000B19DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3537C911DF4A186000B19DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3537C911DF4A186000B19DA /* DexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewController.swift; sourceTree = "<group>"; };
 		D3537C941DF4A186000B19DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3537C971DF4A186000B19DA /* PokeSource.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokeSource.xcdatamodel; sourceTree = "<group>"; };
 		D3537C991DF4A186000B19DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3537C9C1DF4A186000B19DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3537C9E1DF4A186000B19DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3537CA41DF4A1E1000B19DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryDexTableViewCell.swift; path = Views/Layouts/EntryDexTableViewCell.swift; sourceTree = "<group>"; };
+		D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryDexTableViewCell.xib; path = Views/Layouts/EntryDexTableViewCell.xib; sourceTree = "<group>"; };
+		D3537CAF1DF4B26F000B19DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = Services/ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +47,7 @@
 		D3537C831DF4A186000B19DA = {
 			isa = PBXGroup;
 			children = (
+				D3537CA41DF4A1E1000B19DA /* .gitignore */,
 				D3537C8E1DF4A186000B19DA /* PokeSource */,
 				D3537C8D1DF4A186000B19DA /* Products */,
 			);
@@ -56,15 +64,82 @@
 		D3537C8E1DF4A186000B19DA /* PokeSource */ = {
 			isa = PBXGroup;
 			children = (
-				D3537C8F1DF4A186000B19DA /* AppDelegate.swift */,
-				D3537C911DF4A186000B19DA /* ViewController.swift */,
-				D3537C931DF4A186000B19DA /* Main.storyboard */,
+				D3537CB21DF4B2AA000B19DA /* Application */,
+				D3537CAB1DF4B1D7000B19DA /* Controllers */,
+				D3537CAE1DF4B24F000B19DA /* Services */,
+				D3537CB11DF4B295000B19DA /* Utils */,
+				D3537CA51DF4B106000B19DA /* Views */,
 				D3537C991DF4A186000B19DA /* Assets.xcassets */,
-				D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */,
-				D3537C9E1DF4A186000B19DA /* Info.plist */,
-				D3537C961DF4A186000B19DA /* PokeSource.xcdatamodeld */,
+				D3537CAD1DF4B243000B19DA /* Models */,
 			);
 			path = PokeSource;
+			sourceTree = "<group>";
+		};
+		D3537CA51DF4B106000B19DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3537CA61DF4B10B000B19DA /* Layouts */,
+				D3537C931DF4A186000B19DA /* Main.storyboard */,
+				D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D3537CA61DF4B10B000B19DA /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		D3537CAB1DF4B1D7000B19DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3537CAC1DF4B1E4000B19DA /* Widgets */,
+				D3537C911DF4A186000B19DA /* DexViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D3537CAC1DF4B1E4000B19DA /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */,
+			);
+			name = Widgets;
+			sourceTree = "<group>";
+		};
+		D3537CAD1DF4B243000B19DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3537C961DF4A186000B19DA /* PokeSource.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D3537CAE1DF4B24F000B19DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D3537CAF1DF4B26F000B19DA /* ApiManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		D3537CB11DF4B295000B19DA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D3537CB21DF4B2AA000B19DA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D3537C9E1DF4A186000B19DA /* Info.plist */,
+				D3537C8F1DF4A186000B19DA /* AppDelegate.swift */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +174,7 @@
 				TargetAttributes = {
 					D3537C8B1DF4A186000B19DA = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4G3577L73Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3537CAA1DF4B1C7000B19DA /* EntryDexTableViewCell.xib in Resources */,
 				D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */,
 				D3537C9A1DF4A186000B19DA /* Assets.xcassets in Resources */,
 				D3537C951DF4A186000B19DA /* Main.storyboard in Resources */,
@@ -139,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3537C921DF4A186000B19DA /* ViewController.swift in Sources */,
+				D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */,
+				D3537C921DF4A186000B19DA /* DexViewController.swift in Sources */,
+				D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */,
 				D3537C901DF4A186000B19DA /* AppDelegate.swift in Sources */,
 				D3537C981DF4A186000B19DA /* PokeSource.xcdatamodeld in Sources */,
 			);
@@ -262,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G3577L73Y;
 				INFOPLIST_FILE = PokeSource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ozonepowered.PokeSource;
@@ -274,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G3577L73Y;
 				INFOPLIST_FILE = PokeSource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ozonepowered.PokeSource;
