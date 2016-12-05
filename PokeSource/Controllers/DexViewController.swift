@@ -30,20 +30,22 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.dexTableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) as! EntryDexTableViewCell
         
-        cell.numberLabel.text = "001"
+        cell.numberLabel.text = "\(indexPath.item + 1)"
         cell.nameLabel.text = "Bulbizarre"
-        if let pkmnImage:UIImage = UIImage(named: "1") {
+        
+        if let pkmnImage:UIImage = UIImage(named: "\(indexPath.item + 1)") {
             print("Successfuly fetched image")
             cell.imageLabel.image = pkmnImage
-        } else {
+        } else if let unknownImage:UIImage = UIImage(named:"0") {
+            cell.imageLabel.image = unknownImage
             print("Couldn't fetch image")
         }
-        //cell.textLabel?.text = "Bulbi"
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 700
+        return 151
     }
     
     
