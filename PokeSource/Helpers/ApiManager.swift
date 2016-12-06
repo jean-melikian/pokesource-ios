@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Api {
+class ApiManager {
     static let baseUri:String = String("http://pokeapi.co/api/v2")
     
     static func buildUri(route:String, targetNameOrId: String?) -> String {
