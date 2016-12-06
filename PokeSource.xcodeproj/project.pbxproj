@@ -17,7 +17,7 @@
 		D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */; };
 		D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */; };
 		D3537CAA1DF4B1C7000B19DA /* EntryDexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */; };
-		D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CAF1DF4B26F000B19DA /* ApiManager.swift */; };
+		D3537CB01DF4B26F000B19DA /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CAF1DF4B26F000B19DA /* ApiRoutes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		D3537CA41DF4A1E1000B19DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDexTableViewCell.swift; sourceTree = "<group>"; };
 		D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDexTableViewCell.xib; sourceTree = "<group>"; };
-		D3537CAF1DF4B26F000B19DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D3537CAF1DF4B26F000B19DA /* ApiRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRoutes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		D3537CAE1DF4B24F000B19DA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D3537CAF1DF4B26F000B19DA /* ApiManager.swift */,
+				D3537CAF1DF4B26F000B19DA /* ApiRoutes.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			files = (
 				D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */,
 				D3537C921DF4A186000B19DA /* DexViewController.swift in Sources */,
-				D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */,
+				D3537CB01DF4B26F000B19DA /* ApiRoutes.swift in Sources */,
 				D3537C901DF4A186000B19DA /* AppDelegate.swift in Sources */,
 				D3537C981DF4A186000B19DA /* PokeSource.xcdatamodeld in Sources */,
 			);
