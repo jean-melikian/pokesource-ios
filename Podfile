@@ -6,6 +6,7 @@ target 'PokeSource' do
   use_frameworks!
 
   # Pods for PokeSource
-  pod 'Alamofire', '~> 4.2'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end
