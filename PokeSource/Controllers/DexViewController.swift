@@ -17,7 +17,7 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     private let cellIdentifier = "EntryDexTableViewCell"
     
-    var pokedexEntries = [[String : AnyObject]]()
+    var jsonPokedex = [[String : AnyObject]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +35,16 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
                 if let resData = swiftyJsonVar["pokemon_entries"].arrayObject {
-                    self.pokedexEntries = resData as! [[String:AnyObject]]
-                    //print(self.pokedexEntries)
-                    //print("Pokedex count: \(self.pokedexEntries.count)")
+                    self.jsonPokedex = resData as! [[String:AnyObject]]
+                    //print(self.jsonPokedex)
+                    //print("Pokedex count: \(self.jsonPokedex.count)")
                     
-                    if self.pokedexEntries.count > 0 {
-                        for entry in self.pokedexEntries {
+                    if self.jsonPokedex.count > 0 {
+                        for entry in self.jsonPokedex {
                             
                             if let pkmnNumber = entry["entry_number"] as? Int32 {
                                 if let pkmnName = entry["pokemon_species"]?["name"] as? String {
-                                    PokemonDao.create(entryNumber: pkmnNumber, name: pkmnName)
+                                    PokemonDao.shared.insertOne(entryNumber: pkmnNumber, name: pkmnName.capitalized)
                                 }
                             }
                         }
@@ -68,8 +68,7 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.dexTableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) as! EntryDexTableViewCell
         
-        if let entry = PokemonDao.findOne(byId: Int32(indexPath.row + 1)) {
-            print("Entry: \(entry)")
+        if let entry = PokemonDao.shared.findOne(byId: Int32(indexPath.row + 1)) {
             cell.numberLabel.text = "\(entry.entry_number)"
                 
             if let pkmnImage:UIImage = UIImage(named: "\(entry.entry_number)") {
@@ -93,8 +92,8 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Returning numberOfRowsInSection \(pokedexEntries.count)")
-        return pokedexEntries.count
+        print("Returning numberOfRowsInSection \(jsonPokedex.count)")
+        return jsonPokedex.count
     }
     
     
