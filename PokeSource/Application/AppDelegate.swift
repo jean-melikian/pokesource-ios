@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize the window
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        // Set background color of window
+        window?.backgroundColor = UIColor.white
+        
+        // Allocate memoeru for an instance of the 'PokedexViewController' class
+        let pokedexViewController = PokedexViewController()
+        
+        // Set the root view controller of the app's window
+        window!.rootViewController = pokedexViewController
+        
+        // Make the window visible
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
