@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class DetailViewController: UIViewController {
     
@@ -27,6 +29,23 @@ class DetailViewController: UIViewController {
         } else {
             mainPokemonImage.image = UIImage(named: "0")
         }
+        
+        // -- Beginning of /pokemon/id/ api call
+        let uri = ApiManager.buildUri(route: "pokemon", targetNameOrId: "\(pokemonEntryNumber)")
+        print(uri)
+        Alamofire.request(uri).responseJSON { (responseData) -> Void in
+            if ((responseData.result.value) != nil) {
+                let pokemonObj = JSON(responseData.result.value!)
+                
+                if let types = pokemonObj["types"].arrayObject {
+                    print(types)
+                    
+
+                }
+            }
+            
+        }
+        // -- End of /pokemon/2/ api call
     }
     
     override func didReceiveMemoryWarning() {
