@@ -18,8 +18,12 @@ class PokemonDao : NSObject {
         pokedexCache = PokemonDao.findAll()!
     }
 
-    func insertOne(entryNumber:Int32, name:String) {
-        if findOne(byId: entryNumber) == nil {
+    func upsertOne(entryNumber:Int32, name:String, typeA:String = "None", typeB:String = "None") {
+        if let p = findOne(byId: entryNumber) {
+            p.name = name
+            p.typeA = typeA
+            p.typeB = typeB
+        } else {
             if let context = DataManager.shared.objectContext {
                 // Equivalent: NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
                 let p = Pokemon(context: context)

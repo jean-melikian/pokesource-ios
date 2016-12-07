@@ -44,7 +44,7 @@ class PokedexViewController: UIViewController, UITableViewDataSource, UITableVie
                             
                             if let pkmnNumber = entry["entry_number"] as? Int32 {
                                 if let pkmnName = entry["pokemon_species"]?["name"] as? String {
-                                    PokemonDao.shared.insertOne(entryNumber: pkmnNumber, name: pkmnName.capitalized)
+                                    PokemonDao.shared.upsertOne(entryNumber: pkmnNumber, name: pkmnName.capitalized)
                                 }
                             }
                         }
