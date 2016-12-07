@@ -96,6 +96,12 @@ class PokedexViewController: UIViewController, UITableViewDataSource, UITableVie
         return jsonPokedex.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.pokemonEntryNumber = PokemonDao.shared.pokedexCache[indexPath.row].entry_number
+        detailVC.pokemonName = PokemonDao.shared.pokedexCache[indexPath.row].name!
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
 }
 
