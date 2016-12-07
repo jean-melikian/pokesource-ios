@@ -16,7 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        // Allocate memory for an instance of the 'PokedexViewController' class
+        let pokedexViewController = PokedexViewController()
+        
+        // Allocate memory for an instance of UINavigationController
+        let navigationController = UINavigationController(rootViewController: pokedexViewController)
+        
+        // Initialize the window
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Set the root view controller of the app's window
+        self.window?.rootViewController = navigationController
+        
+        // Make the window visible
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

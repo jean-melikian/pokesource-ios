@@ -13,14 +13,16 @@
 		D30480A51DF71012000C3104 /* PokemonDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30480A41DF71012000C3104 /* PokemonDao.swift */; };
 		D341DD801DF4E0C60088D361 /* Pokemon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D341DD7F1DF4E0C60088D361 /* Pokemon.xcassets */; };
 		D3537C901DF4A186000B19DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537C8F1DF4A186000B19DA /* AppDelegate.swift */; };
-		D3537C921DF4A186000B19DA /* DexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537C911DF4A186000B19DA /* DexViewController.swift */; };
-		D3537C951DF4A186000B19DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3537C931DF4A186000B19DA /* Main.storyboard */; };
 		D3537C981DF4A186000B19DA /* PokeSource.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3537C961DF4A186000B19DA /* PokeSource.xcdatamodeld */; };
 		D3537C9A1DF4A186000B19DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3537C991DF4A186000B19DA /* Assets.xcassets */; };
 		D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */; };
 		D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */; };
-		D3537CAA1DF4B1C7000B19DA /* EntryDexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */; };
 		D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3537CAF1DF4B26F000B19DA /* ApiManager.swift */; };
+		D36B08421DF7889F00143EFB /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B08401DF7889F00143EFB /* PokedexViewController.swift */; };
+		D36B08461DF78DBE00143EFB /* EntryDexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */; };
+		D36B08471DF78DBE00143EFB /* PokedexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B08451DF78DBE00143EFB /* PokedexViewController.xib */; };
+		D36B084A1DF7959C00143EFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B08481DF7959C00143EFB /* DetailViewController.swift */; };
+		D36B084D1DF795C500143EFB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B084C1DF795C500143EFB /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,16 +35,18 @@
 		D341DD7F1DF4E0C60088D361 /* Pokemon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pokemon.xcassets; sourceTree = "<group>"; };
 		D3537C8C1DF4A186000B19DA /* PokeSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3537C8F1DF4A186000B19DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3537C911DF4A186000B19DA /* DexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewController.swift; sourceTree = "<group>"; };
-		D3537C941DF4A186000B19DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3537C971DF4A186000B19DA /* PokeSource.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokeSource.xcdatamodel; sourceTree = "<group>"; };
 		D3537C991DF4A186000B19DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3537C9C1DF4A186000B19DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3537C9E1DF4A186000B19DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3537CA41DF4A1E1000B19DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDexTableViewCell.swift; sourceTree = "<group>"; };
-		D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDexTableViewCell.xib; sourceTree = "<group>"; };
 		D3537CAF1DF4B26F000B19DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D36B08401DF7889F00143EFB /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDexTableViewCell.xib; sourceTree = "<group>"; };
+		D36B08451DF78DBE00143EFB /* PokedexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokedexViewController.xib; sourceTree = "<group>"; };
+		D36B08481DF7959C00143EFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D36B084C1DF795C500143EFB /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,26 +106,20 @@
 		D3537CA51DF4B106000B19DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3537CA61DF4B10B000B19DA /* Layouts */,
+				D36B084C1DF795C500143EFB /* DetailViewController.xib */,
+				D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */,
+				D36B08451DF78DBE00143EFB /* PokedexViewController.xib */,
 				D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */,
-				D3537C931DF4A186000B19DA /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D3537CA61DF4B10B000B19DA /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				D3537CA81DF4B1C7000B19DA /* EntryDexTableViewCell.xib */,
-			);
-			path = Layouts;
 			sourceTree = "<group>";
 		};
 		D3537CAB1DF4B1D7000B19DA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D3537CAC1DF4B1E4000B19DA /* Widgets */,
-				D3537C911DF4A186000B19DA /* DexViewController.swift */,
+				D36B08401DF7889F00143EFB /* PokedexViewController.swift */,
+				D36B08481DF7959C00143EFB /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,11 +239,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3537CAA1DF4B1C7000B19DA /* EntryDexTableViewCell.xib in Resources */,
 				D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */,
+				D36B084D1DF795C500143EFB /* DetailViewController.xib in Resources */,
+				D36B08461DF78DBE00143EFB /* EntryDexTableViewCell.xib in Resources */,
+				D36B08471DF78DBE00143EFB /* PokedexViewController.xib in Resources */,
 				D341DD801DF4E0C60088D361 /* Pokemon.xcassets in Resources */,
 				D3537C9A1DF4A186000B19DA /* Assets.xcassets in Resources */,
-				D3537C951DF4A186000B19DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36B084A1DF7959C00143EFB /* DetailViewController.swift in Sources */,
 				D30480A51DF71012000C3104 /* PokemonDao.swift in Sources */,
 				D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */,
-				D3537C921DF4A186000B19DA /* DexViewController.swift in Sources */,
 				D30480A11DF70E5F000C3104 /* FileManager+Document.swift in Sources */,
 				D30480A31DF70E79000C3104 /* DataManager.swift in Sources */,
 				D3537CB01DF4B26F000B19DA /* ApiManager.swift in Sources */,
+				D36B08421DF7889F00143EFB /* PokedexViewController.swift in Sources */,
 				D3537C901DF4A186000B19DA /* AppDelegate.swift in Sources */,
 				D3537C981DF4A186000B19DA /* PokeSource.xcdatamodeld in Sources */,
 			);
@@ -318,15 +318,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3537C931DF4A186000B19DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3537C941DF4A186000B19DA /* Base */,
-			);
-			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
 		D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

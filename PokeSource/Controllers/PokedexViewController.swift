@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  PokéMine
+//  PokedexViewController.swift
+//  PokeSource
 //
 //  Created by Jean-Christophe MELIKIAN on 16/11/2016.
 //  Copyright © 2016 ozonePowered. All rights reserved.
@@ -11,8 +11,8 @@ import CoreData
 import Alamofire
 import SwiftyJSON
 
-class DexViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class PokedexViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet weak var dexTableView: UITableView!
     
     private let cellIdentifier = "EntryDexTableViewCell"
@@ -70,14 +70,14 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         if let entry = PokemonDao.shared.findOne(byId: Int32(indexPath.row + 1)) {
             cell.numberLabel.text = "\(entry.entry_number)"
-                
+            
             if let pkmnImage:UIImage = UIImage(named: "\(entry.entry_number)") {
-                    cell.imageLabel.image = pkmnImage
+                cell.imageLabel.image = pkmnImage
             } else if let unknownImage:UIImage = UIImage(named:"0") {
                 cell.imageLabel.image = unknownImage
             }
             cell.nameLabel.text = entry.name
-        
+            
         } else {
             cell.numberLabel.text = "\(indexPath.row + 1)"
             cell.nameLabel.text = "Unknown"
@@ -96,6 +96,12 @@ class DexViewController: UIViewController, UITableViewDataSource, UITableViewDel
         return jsonPokedex.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.pokemonEntryNumber = PokemonDao.shared.pokedexCache[indexPath.row].entry_number
+        detailVC.pokemonName = PokemonDao.shared.pokedexCache[indexPath.row].name!
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
 }
 
