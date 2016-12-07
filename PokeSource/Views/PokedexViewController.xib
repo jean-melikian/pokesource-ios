@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="phC-40-ksN">
-                    <rect key="frame" x="8" y="16" width="359" height="643"/>
+                    <rect key="frame" x="8" y="8" width="359" height="651"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -30,7 +30,7 @@
             <constraints>
                 <constraint firstAttribute="trailingMargin" secondItem="phC-40-ksN" secondAttribute="trailing" id="5v4-Pf-ylC"/>
                 <constraint firstItem="phC-40-ksN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TZI-vZ-ZFs"/>
-                <constraint firstItem="phC-40-ksN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="8" id="ZsU-Pu-u8G"/>
+                <constraint firstItem="phC-40-ksN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="ZsU-Pu-u8G"/>
                 <constraint firstItem="phC-40-ksN" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="faF-my-GLR"/>
                 <constraint firstItem="phC-40-ksN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="id4-QZ-dK4"/>
             </constraints>

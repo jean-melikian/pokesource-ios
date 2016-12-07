@@ -21,6 +21,8 @@
 		D36B08421DF7889F00143EFB /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B08401DF7889F00143EFB /* PokedexViewController.swift */; };
 		D36B08461DF78DBE00143EFB /* EntryDexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */; };
 		D36B08471DF78DBE00143EFB /* PokedexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B08451DF78DBE00143EFB /* PokedexViewController.xib */; };
+		D36B084A1DF7959C00143EFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B08481DF7959C00143EFB /* DetailViewController.swift */; };
+		D36B084D1DF795C500143EFB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36B084C1DF795C500143EFB /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		D36B08401DF7889F00143EFB /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDexTableViewCell.xib; sourceTree = "<group>"; };
 		D36B08451DF78DBE00143EFB /* PokedexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokedexViewController.xib; sourceTree = "<group>"; };
+		D36B08481DF7959C00143EFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D36B084C1DF795C500143EFB /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		D3537CA51DF4B106000B19DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D36B084C1DF795C500143EFB /* DetailViewController.xib */,
 				D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */,
 				D36B08451DF78DBE00143EFB /* PokedexViewController.xib */,
 				D3537C9B1DF4A186000B19DA /* LaunchScreen.storyboard */,
@@ -114,6 +119,7 @@
 			children = (
 				D3537CAC1DF4B1E4000B19DA /* Widgets */,
 				D36B08401DF7889F00143EFB /* PokedexViewController.swift */,
+				D36B08481DF7959C00143EFB /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3537C9D1DF4A186000B19DA /* LaunchScreen.storyboard in Resources */,
+				D36B084D1DF795C500143EFB /* DetailViewController.xib in Resources */,
 				D36B08461DF78DBE00143EFB /* EntryDexTableViewCell.xib in Resources */,
 				D36B08471DF78DBE00143EFB /* PokedexViewController.xib in Resources */,
 				D341DD801DF4E0C60088D361 /* Pokemon.xcassets in Resources */,
@@ -296,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36B084A1DF7959C00143EFB /* DetailViewController.swift in Sources */,
 				D30480A51DF71012000C3104 /* PokemonDao.swift in Sources */,
 				D3537CA91DF4B1C7000B19DA /* EntryDexTableViewCell.swift in Sources */,
 				D30480A11DF70E5F000C3104 /* FileManager+Document.swift in Sources */,
