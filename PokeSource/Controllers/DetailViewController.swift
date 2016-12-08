@@ -33,17 +33,22 @@ class DetailViewController: UIViewController {
         // -- Beginning of /pokemon/id/ api call
         let uri = ApiManager.buildUri(route: "pokemon", targetNameOrId: "\(pokemonEntryNumber)")
         print(uri)
-        Alamofire.request(uri).responseJSON { (responseData) -> Void in
-            if ((responseData.result.value) != nil) {
-                let pokemonObj = JSON(responseData.result.value!)
-                
-                if let types = pokemonObj["types"].arrayObject {
-                    print(types)
+        Alamofire.request(uri).responseJSON { response in
+            switch response.result {
+            case .success:
+                if ((response.result.value) != nil) {
+                    let pokemonObj = JSON(response.result.value!)
                     
-
+                    if let types = pokemonObj["types"].arrayObject {
+                        print(types)
+                        // TODO: Store types and display them
+                    }
                 }
+                
+            case .failure(let error):
+                print("Could't fetch data from \(uri)")
+                print(error)
             }
-            
         }
         // -- End of /pokemon/2/ api call
     }

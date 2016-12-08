@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class PokemonDao : NSObject {
-    var pokedexCache:[Pokemon]
+    var pokedexCache:Array<Pokemon>
     
     public static let shared = PokemonDao()
     
@@ -48,12 +48,15 @@ class PokemonDao : NSObject {
     }
     
     func findOne(byId: Int32) -> Pokemon? {
+        
         if let context = DataManager.shared.objectContext {
             let request: NSFetchRequest<Pokemon> = Pokemon.fetchRequest()
             request.predicate = NSPredicate(format: "entry_number==%d", byId)
             if let pokemons = try? context.fetch(request) {
                 return pokemons.first
             }
+        } else {
+            return self.pokedexCache[Int(byId)]
         }
         return nil
     }
