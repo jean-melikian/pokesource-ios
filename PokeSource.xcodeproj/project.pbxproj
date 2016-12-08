@@ -42,6 +42,7 @@
 		D3537CA41DF4A1E1000B19DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D3537CA71DF4B1C7000B19DA /* EntryDexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDexTableViewCell.swift; sourceTree = "<group>"; };
 		D3537CAF1DF4B26F000B19DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D3689D521DF7BCC2000DF26E /* PokeSource 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PokeSource 2.xcdatamodel"; sourceTree = "<group>"; };
 		D36B08401DF7889F00143EFB /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		D36B08441DF78DBE00143EFB /* EntryDexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDexTableViewCell.xib; sourceTree = "<group>"; };
 		D36B08451DF78DBE00143EFB /* PokedexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokedexViewController.xib; sourceTree = "<group>"; };
@@ -480,6 +481,7 @@
 		D3537C961DF4A186000B19DA /* PokeSource.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D3689D521DF7BCC2000DF26E /* PokeSource 2.xcdatamodel */,
 				D3537C971DF4A186000B19DA /* PokeSource.xcdatamodel */,
 			);
 			currentVersion = D3537C971DF4A186000B19DA /* PokeSource.xcdatamodel */;

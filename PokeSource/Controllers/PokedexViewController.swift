@@ -21,6 +21,7 @@ class PokedexViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Pokédex"
         self.dexTableView.rowHeight = 100
         self.dexTableView.dataSource = self
         self.dexTableView.delegate = self
@@ -30,28 +31,36 @@ class PokedexViewController: UIViewController, UITableViewDataSource, UITableVie
         // -- Beginning of /pokedex/2/ api call
         let uri = ApiManager.buildUri(route: "pokedex", targetNameOrId: "2")
         print(uri)
-        Alamofire.request(uri).responseJSON { (responseData) -> Void in
-            if ((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)
-                
-                if let resData = swiftyJsonVar["pokemon_entries"].arrayObject {
-                    self.jsonPokedex = resData as! [[String:AnyObject]]
-                    //print(self.jsonPokedex)
-                    //print("Pokedex count: \(self.jsonPokedex.count)")
+        
+        Alamofire.request(uri).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                print("Fetching data with success from \(uri)")
+                if ((response.result.value) != nil) {
+                    let swiftyJsonVar = JSON(response.result.value!)
                     
-                    if self.jsonPokedex.count > 0 {
-                        for entry in self.jsonPokedex {
-                            
-                            if let pkmnNumber = entry["entry_number"] as? Int32 {
-                                if let pkmnName = entry["pokemon_species"]?["name"] as? String {
-                                    PokemonDao.shared.insertOne(entryNumber: pkmnNumber, name: pkmnName.capitalized)
+                    if let resData = swiftyJsonVar["pokemon_entries"].arrayObject {
+                        self.jsonPokedex = resData as! [[String:AnyObject]]
+                        //print(self.jsonPokedex)
+                        //print("Pokedex count: \(self.jsonPokedex.count)")
+                        
+                        if self.jsonPokedex.count > 0 {
+                            for entry in self.jsonPokedex {
+                                
+                                if let pkmnNumber = entry["entry_number"] as? Int32 {
+                                    if let pkmnName = entry["pokemon_species"]?["name"] as? String {
+                                        PokemonDao.shared.upsertOne(entryNumber: pkmnNumber, name: pkmnName.capitalized)
+                                    }
                                 }
                             }
                         }
-                        self.dexTableView.reloadData()
                     }
                 }
+            case .failure(let error):
+                print("Could't fetch data from \(uri)")
+                print(error)
             }
+            self.dexTableView.reloadData()
             
         }
         // -- End of /pokedex/2/ api call
@@ -92,8 +101,9 @@ class PokedexViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Returning numberOfRowsInSection \(jsonPokedex.count)")
-        return jsonPokedex.count
+        let pokemonCount = PokemonDao.shared.pokedexCache.count
+        print("Returning numberOfRowsInSection \(pokemonCount)")
+        return pokemonCount
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
