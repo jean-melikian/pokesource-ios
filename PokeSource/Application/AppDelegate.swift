@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AlamofireNetworkActivityIndicator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Make the window visible
         self.window?.makeKeyAndVisible()
+
+        // Enabling the Alamofire network activity indicator showing as a spinner
+        NetworkActivityIndicatorManager.shared.isEnabled = true
+
         
         return true
     }

@@ -80,7 +80,7 @@ class DetailViewController: UIViewController {
                                                         UIActivityType.postToFlickr,
                                                         UIActivityType.postToVimeo,
                                                         UIActivityType.postToTencentWeibo,
-                                                        UIActivityType.postToWeibo,
+                                                        UIActivityType.postToWeibo
         ]
         navigationController?.present(activityViewController, animated: true) {
             

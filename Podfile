@@ -7,6 +7,7 @@ target 'PokeSource' do
 
   # Pods for PokeSource
   pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
   pod 'SwiftyJSON'
 
 end
